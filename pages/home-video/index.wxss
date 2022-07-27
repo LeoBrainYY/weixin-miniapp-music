@@ -1,0 +1,12 @@
+/* pages/home-video/index.wxss *//* components/video-list-item/index.wxss */
+.video {
+  display: flex;
+  /* 规定灵活的项目在必要的时候拆行或拆列。 */
+  flex-wrap: wrap;
+  /*  均匀排列每个元素 每个元素周围分配相同的空间*/
+  justify-content: space-around;
+}
+
+.item {
+  width: 48%;
+}

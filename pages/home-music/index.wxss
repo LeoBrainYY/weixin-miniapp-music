@@ -1,0 +1,18 @@
+/* pages/home-music/index.wxss */
+.van-search__content {
+  background-color: #fff !important;
+}
+
+/* 轮播图样式 */
+.swiper {
+
+}
+
+.swiper-item {
+  /* 轮播图片会多出3px */
+  display: flex;
+}
+
+.swiper-item .swiper-image {
+  width: 100%;
+}

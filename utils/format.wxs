@@ -1,0 +1,35 @@
+function formatCount(count) {
+  var counter = parseInt(count)
+  if(counter > 100000000) {
+    // 保留一位小数
+    return (counter / 100000000).toFixed(1) + "亿"
+  } else if (counter > 10000){
+    return (counter / 10000).toFixed(1) + "万"
+  } else {
+    return counter + ""
+  }
+}
+
+function padLeftZero(time) {
+  time = time + ""
+  // 截取time的长度 time一位数字就会保留一个0
+  return ("00" + time).slice(time.length)
+}
+
+function formatDuration(duration) {
+  // 毫秒转为秒
+  duration = duration / 1000
+  // 分钟
+  var minute = Math.floor(duration / 60)
+  // 秒
+  var second = Math.floor(duration) % 60
+
+  return padLeftZero(minute) + ":" + padLeftZero(second) 
+}
+
+// 不支持ES6 所以无法使用export
+// common JS
+module.exports = {
+  formatCount: formatCount,
+  formatDuration: formatDuration
+}

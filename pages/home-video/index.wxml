@@ -1,0 +1,11 @@
+<!--pages/home-video/index.wxml-->
+
+<view class="video">
+  <view class="item" wx:for="{{topMVs}}" wx:key="id">
+    <video-item-v1  item="{{item}}" 
+                    bindtap="handleItemVideoClick"
+                    data-item="{{item}}">
+                    <!-- 绑定一个item 可以在函数传入的event事件中拿到点击的id -->
+    </video-item-v1>
+  </view>
+</view>

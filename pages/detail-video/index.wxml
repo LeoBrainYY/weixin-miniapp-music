@@ -2,6 +2,7 @@
 <video  class="video" 
         src="{{mvURLInfo.url}}"
         danmu-list="{{danmuList}}"
+        referrer-policy="origin"
         autoplay>
 </video>
 

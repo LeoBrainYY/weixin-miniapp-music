@@ -4,7 +4,7 @@ Component({
     // properties存放外界传入的数据
     item: { 
       type: Object,
-      default: {}
+      value: {}
     }
   },
 

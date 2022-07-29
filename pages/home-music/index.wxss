@@ -1,11 +1,23 @@
 /* pages/home-music/index.wxss */
+page {
+  /* 轮播图边距 */
+  padding: 0 20rpx;
+}
+
 .van-search__content {
   background-color: #fff !important;
 }
 
+.van-search {
+  padding: 10px 0 !important;
+}
+
 /* 轮播图样式 */
 .swiper {
-
+  border-radius: 10rpx;
+  overflow: hidden;
+  /* 有些机型无法显示轮播图圆角 */
+  transform: translateY(0);
 }
 
 .swiper-item {

@@ -4,7 +4,8 @@
     "pages/home-video/index",
     "components/video-item-v1/index",
     "pages/detail-video/index",
-    "pages/detail-search/index"
+    "pages/detail-search/index",
+    "components/area-header/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

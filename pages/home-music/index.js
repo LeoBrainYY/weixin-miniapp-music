@@ -1,6 +1,9 @@
 // pages/home-music/index.js
 import { getBanners } from '../../service/api_music'
 import queryRect from '../../utils/query-rect'
+import throttle from '../../utils/throttle'
+
+const throttleQueryRect = throttle(queryRect)
 
 Page({
   data: {
@@ -31,7 +34,7 @@ Page({
   },
 
   handleSwiperImageLoaded: function() {
-    queryRect('.swiper-image').then((res) => {
+    throttleQueryRect('.swiper-image').then((res) => {
       const rect = res[0]
       // console.log(rect.height);
       // 动态赋值轮播图组件image的的高度

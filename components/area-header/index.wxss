@@ -12,18 +12,24 @@
   font-weight: 700;
 }
 
-/* .header .slot:empty + .default {
+/* 伪类选择器 判断插槽的slot是否为空 */
+/* 如果伪类选择器为空 应该显示className="default的标签内容" */
+/* + 表示不是他的子类 */
+.header .slot:empty + .default {
   display: flex;
-} */
+  /* align-items: center;
+  font-size: 28rpx;
+  color: #777; */
+}
 
-.header .right {
-  display: flex;
+.header .default {
+  display: none;
   align-items: center;
   font-size: 28rpx;
   color: #777;
 }
 
-.header .right .icon {
+.header .default .icon {
   width: 50rpx;
   height: 50rpx;
 }

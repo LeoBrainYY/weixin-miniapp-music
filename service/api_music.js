@@ -5,3 +5,9 @@ export function getBanners() {
     type: 2
   })
 }
+
+export function getRankings() {
+  return cyRequest.get('/top/list', {
+    id: 2884035
+  })
+}

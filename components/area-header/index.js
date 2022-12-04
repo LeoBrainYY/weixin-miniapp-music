@@ -1,7 +1,5 @@
 // components/area-header/index.js
 Component({
-
-
   properties: {
     title: {
       type: String,

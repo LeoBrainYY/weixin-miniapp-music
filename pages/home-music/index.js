@@ -1,4 +1,5 @@
 // pages/home-music/index.js
+import { rankingStore } from '../../store/ranking-store'
 import { getBanners } from '../../service/api_music'
 import queryRect from '../../utils/query-rect'
 import throttle from '../../utils/throttle'
@@ -17,6 +18,9 @@ Page({
   onLoad(options) {
     // 获取页面数据
     this.getPageData()
+
+    // sending sharing data(发起共享数据)
+    rankingStore.dispatch('getRankingDataAction')
   },
 
   // 网络请求

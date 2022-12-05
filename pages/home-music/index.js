@@ -1,5 +1,6 @@
 // pages/home-music/index.js
-import { rankingStore } from '../../store/ranking-store'
+import { rankingStore } from '../../store/index'
+
 import { getBanners } from '../../service/api_music'
 import queryRect from '../../utils/query-rect'
 import throttle from '../../utils/throttle'
@@ -9,7 +10,9 @@ const throttleQueryRect = throttle(queryRect)
 Page({
   data: {
     banners: [],
-    swiperHeight: 60
+    swiperHeight: 60,
+
+    recommendSongs: []
   },
 
   /**
@@ -21,6 +24,16 @@ Page({
 
     // sending sharing data(发起共享数据)
     rankingStore.dispatch('getRankingDataAction')
+
+    // get data from store of sharing
+    rankingStore.onState('hotRanking', (res) => {
+      // console.log(res, 'homemusic')
+      // 如果没有值 直接return
+      if (!res.tracks) return 
+      const recommendSongs = res.tracks.slice(0, 6)
+      // console.log(recommendSongs)
+      this.setData({ recommendSongs })
+    })
   },
 
   // 网络请求

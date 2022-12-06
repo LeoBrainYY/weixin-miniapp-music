@@ -1,0 +1,20 @@
+<!--components/song-menu-area/index.wxml-->
+<area-header title="热门歌单"></area-header>
+
+<!-- 此处获取动态屏幕宽度 -->
+<!-- <scroll-view class="menu-list" scroll-x style="width: {{screenWidth}}px;"> -->
+
+<scroll-view class="menu-list" scroll-x>
+
+<!-- test scroll-view  -->
+<!-- 最终目的就是让滚动时刚好可以完全紧贴手机屏幕边 -->
+<!-- 而在加载初始完成时 与上下的其他排布时完全对其的一个测试 -->
+  <!-- <block wx:for="{{6}}" wx:key="*this">
+    <view class="menu-item"></view>
+  </block> -->
+  <block wx:for="{{songMenu}}" wx:key="id">
+    <view class="menu-item">
+      <song-menu-item item="{{item}}"></song-menu-item>
+    </view>
+  </block>
+</scroll-view>

@@ -11,3 +11,11 @@ export function getRankings() {
     id: 2884035
   })
 }
+
+export function getSomeMenu(cat="全部", limit=6, offset=0) {
+  return cyRequest.get('/top/playlist', {
+    cat,
+    limit,
+    offset
+  })
+}

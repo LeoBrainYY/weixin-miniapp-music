@@ -33,3 +33,7 @@
     </block>
   </view>
 </view>
+
+<!-- 热门歌单 -->
+<!-- 接收父组件传递过来的hotSomeMenu数据 -->
+<song-menu-area songMenu="{{hotSomeMenu}}"></song-menu-area>

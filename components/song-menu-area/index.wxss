@@ -1,0 +1,29 @@
+/* components/song-menu-area/index.wxss */
+.menu-list {
+  /* 对于对其的问题 如果不获取手机屏幕宽度 */
+  /* 可以直接使用视口属性 */
+  /* 视口的宽度就是scroll-view属性  */
+  width: 100vw;
+  /* 不换行 */
+  white-space: nowrap;
+
+  /* 因为整个的页面有个padding 所以需要把原来的处理掉*/
+  position: relative;
+  left: -20rpx;
+}
+
+.menu-item {
+  display: inline-block;
+  /* 因为有的机型会出现每一个小的框忽上忽下的问题 */
+  vertical-align: top;
+
+  width: 200rpx;
+  height: 200rpx;
+  background-color: red;
+  margin-left: 20rpx;
+}
+
+/* 获取滚动x轴最后一个item 对齐*/
+.menu-item:last-of-type {
+  margin-right: 20rpx;
+}

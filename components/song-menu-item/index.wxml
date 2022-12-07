@@ -1,2 +1,11 @@
 <!--components/song-menu-item/index.wxml-->
-<text>components/song-menu-item/index.wxml</text>
+<view class="item">
+  <view class="top">
+  <!-- widthFix 宽度不变，高度自动变化，保持原图宽高比不变 -->
+  <!-- 继续之前 看一下样式怎么写的 -->
+    <image class="image" mode="widthFix" src="{{item.coverImgUrl}}">
+    </image>
+    <view class="play-counter">{{item.playcount}}</view>
+    <view class="bottom">{{item.name}}</view>
+  </view>
+</view>

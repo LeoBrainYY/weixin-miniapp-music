@@ -4,14 +4,29 @@ import { getRankings } from '../service/api_music'
 
 const rankingStore = new HYEventStore({
   state: {
-    hotRanking: {}
+    hotRanking: {},
+
   },
   actions: {
     getRankingDataAction(ctx) {
-      getRankings().then(res => {
-        console.log(res)
-        ctx.hotRanking = res.playlist
-      })
+      for (let i = 0; i < 4; i++) {
+        getRankings(i).then(res => {
+          switch (i) {
+            case 0: 
+              console.log(res)
+              break;
+            case 1: 
+              console.log(res)
+              break;
+            case 2: 
+              console.log(res)
+              break;
+            case 3: 
+              console.log(res)
+              break;
+          }
+        })
+      }
     }
   }
 })

@@ -1,5 +1,5 @@
 <!--components/song-menu-area/index.wxml-->
-<area-header title="热门歌单"></area-header>
+<area-header title="{{title}}"></area-header>
 
 <!-- 此处获取动态屏幕宽度 -->
 <!-- <scroll-view class="menu-list" scroll-x style="width: {{screenWidth}}px;"> -->

@@ -23,7 +23,7 @@
 </swiper>
 
 <!-- 推荐歌曲 -->
-<view class="recommend-song">
+<view class="recommend-song" wx:if="{{ recommendSongs.length > 0 }}">
   <area-header title="推荐歌曲">
   <!-- <text>text</text> -->
   </area-header>
@@ -36,4 +36,15 @@
 
 <!-- 热门歌单 -->
 <!-- 接收父组件传递过来的hotSomeMenu数据 -->
-<song-menu-area songMenu="{{hotSomeMenu}}"></song-menu-area>
+<!-- 这里的title如果不传 就会默认使用song-menu-area组件里的默认值 -->
+<song-menu-area title="热门歌单"
+                songMenu="{{hotSomeMenu}}"
+                wx:if="{{ hotSomeMenu.length > 0}}"></song-menu-area>
+<song-menu-area title="推荐歌单"
+                songMenu="{{recommendSomeMenu}}"
+                wx:if="{{ recommendSomeMenu.length > 0}}"></song-menu-area>
+
+<!-- 巅峰榜 -->
+<view>
+  <area-header title="巅峰榜" showRight="{{false}}"></area-header>
+</view>

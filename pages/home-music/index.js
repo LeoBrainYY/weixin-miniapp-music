@@ -1,3 +1,11 @@
+/*
+ * @Author: xiaoxinYy 3037686283@qq.com
+ * @Date: 2022-07-06 16:21:47
+ * @LastEditors: xiaoxinYy 3037686283@qq.com
+ * @LastEditTime: 2022-12-09 21:40:54
+ * @FilePath: \weixin_music_app\pages\home-music\index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 // pages/home-music/index.js
 import { rankingStore } from '../../store/index'
 
@@ -48,6 +56,11 @@ Page({
 
     getSomeMenu().then(res => {
       this.setData({ hotSomeMenu: res.playlists })
+    })
+
+    // 传入参数 其他两个参数默认
+    getSomeMenu('华语').then(res => {
+      this.setData({ recommendSomeMenu: res.playlists })
     })
   },
 

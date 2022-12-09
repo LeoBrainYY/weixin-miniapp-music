@@ -17,9 +17,11 @@
   /* 因为有的机型会出现每一个小的框忽上忽下的问题 */
   vertical-align: top;
 
-  width: 200rpx;
-  height: 200rpx;
-  background-color: red;
+  /* 设置父组件宽度 */
+  width: 220rpx;
+  /* width: 200rpx;
+  height: 200rpx; */
+  /* background-color: red; */
   margin-left: 20rpx;
 }
 
